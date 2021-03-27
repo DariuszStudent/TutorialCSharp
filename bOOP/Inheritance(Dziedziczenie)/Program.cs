@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace bOOP
+namespace Inheritance_Dziedziczenie_
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Ideologia , koncept który zakłada że wszystko może być obiektem
+            Console.WriteLine("Hello World!");
         }
     }
 }
