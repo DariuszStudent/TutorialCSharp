@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NoName.Database;
+using NoName.Services;
+using NoNameApp.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -19,6 +22,9 @@ namespace NoName
             base.OnStartup(e);
 
             var serviceColletion = new ServiceCollection();
+
+            serviceColletion.AddTransient<IDataStoreManager, DataStoreManager>();
+            serviceColletion.AddTransient<ICalculatorManager, CalculatorManager>();
         }
     }
 }
